@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:github_responsive/responsive/responsive_layout.dart';
-import 'package:github_responsive/responsive/screens/desktop_screen.dart';
-import 'package:github_responsive/responsive/screens/large_screen.dart';
-import 'package:github_responsive/responsive/screens/mobile_screen.dart';
-import 'package:github_responsive/responsive/screens/tablet_screen.dart';
+import 'package:github_responsive/responsive/screens/desktop/desktop_screen.dart';
+import 'package:github_responsive/responsive/screens/large/large_screen.dart';
+import 'package:github_responsive/responsive/screens/mobile/mobile_screen.dart';
+import 'package:github_responsive/responsive/screens/tablet/tablet_screen.dart';
 
 void main() {
   runApp(const MyApp());
