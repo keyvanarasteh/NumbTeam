@@ -1,4 +1,4 @@
 Review 01 
 
-    - Empty 
-    - 0
+    - Responsive (no) 0
+    - 6
