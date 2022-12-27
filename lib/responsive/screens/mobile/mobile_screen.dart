@@ -199,7 +199,7 @@ class MobileScreen extends StatelessWidget {
                             SizedBox(width: 10),
                             Expanded(
                               child: TextField(
-                                style: TextStyle(
+                                  style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 18,
                                 ),
@@ -226,7 +226,10 @@ class MobileScreen extends StatelessWidget {
               child: Column(
                 //welcome page
                 children: const [
-                  SizedBox(height: 20),
+                  SizedBox(height: 10),
+                  Padding(
+                    padding: EdgeInsets.only(left:10, bottom: 0, right: 10, top:10),//apply padding to all four sides
+                  child: 
                   Text(
                     'The home for all developers — including you.',
                     style: TextStyle(
@@ -234,15 +237,19 @@ class MobileScreen extends StatelessWidget {
                       fontSize: 30,
                     ),
                     textAlign: TextAlign.left,
-                  ),
+                  ),),
                   SizedBox(height: 10),
+                  Padding(
+                    padding: EdgeInsets.only(left:10, bottom: 10, right: 10, top:0),
+                      
+                  child: 
                   Text(
                     'Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.',
                     style: TextStyle(
                       color: Color.fromARGB(255, 166, 153, 153),
                       fontSize: 14,
                     ),
-                  ),
+                  ),),
                 ],
               ),
             ),
