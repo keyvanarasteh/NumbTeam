@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../utils/colors.dart';
 
 class MobileScreen extends StatelessWidget {
   const MobileScreen({super.key});
@@ -7,10 +8,11 @@ class MobileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: AppColors.primaryColor,
         appBar: AppBar(
           primary: false,
           centerTitle: true,
-          backgroundColor: const Color.fromARGB(255, 22, 27, 34),
+          backgroundColor: AppColors.secondaryColor,
           elevation: 0,
           actions: [
             IconButton(
@@ -19,7 +21,26 @@ class MobileScreen extends StatelessWidget {
                 color: Colors.white,
                 size: 30,
               ),
-              onPressed: () {},
+              //add on pressed alert dialog
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      title: const Text('Notifications'),
+                      content: const Text('You have no notifications :)'),
+                      actions: [
+                        TextButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: const Text('OK'),
+                        ),
+                      ],
+                    );
+                  },
+                );
+              },
             ),
           ],
           title: Padding(
@@ -36,7 +57,7 @@ class MobileScreen extends StatelessWidget {
           //drawer opening from up to down
     
           child: Container(
-            color: const Color.fromARGB(255, 22, 27, 34),
+            color: AppColors.secondaryColor,
             child: ListView(
               padding: EdgeInsets.zero,
               children: [
@@ -176,17 +197,19 @@ class MobileScreen extends StatelessWidget {
         body: Column(
           children: [
             Container(
-              color: const Color.fromARGB(255, 22, 27, 34),
+              color: AppColors.secondaryColor,
               child: Padding(
                 padding: const EdgeInsets.only(left: 20, right: 20),
                 child: Row(
                   children: [
                     Expanded(
                       child: Container(
+                        margin: const EdgeInsets.all(10.0),
                         height: 40,
                         decoration: BoxDecoration(
                           color: const Color.fromARGB(255, 33, 40, 50),
                           borderRadius: BorderRadius.circular(5),
+                          
                         ),
                         child: Row(
                           children: const [
@@ -222,7 +245,7 @@ class MobileScreen extends StatelessWidget {
               ),
             ),
             Container(
-              color: const Color.fromARGB(255, 0, 0, 0),
+              color: AppColors.primaryColor,
               child: Column(
                 //welcome page
                 children: const [
@@ -249,9 +272,14 @@ class MobileScreen extends StatelessWidget {
                       color: Color.fromARGB(255, 166, 153, 153),
                       fontSize: 14,
                     ),
-                  ),),
+                  ),
+                  ),
                 ],
               ),
+            ),
+            Container(
+              color: const Color.fromARGB(255, 22, 27, 34),
+
             ),
           ],
         ),
