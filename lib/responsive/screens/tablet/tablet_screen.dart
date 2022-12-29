@@ -202,7 +202,7 @@ class TabletScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 20, right: 20),
                   child: Row(
                     children: [
-                      Expanded(
+                      Expanded( 
                         child: Container(
                           margin: const EdgeInsets.all(10.0),
                           height: 40,
@@ -283,7 +283,10 @@ class TabletScreen extends StatelessWidget {
                     children: [
                       Expanded(
                         child: Container( 
-                          color: Color.fromARGB(255, 22, 27, 34),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            color: Color.fromARGB(255, 22, 27, 34),
+                          ),
                           padding: const EdgeInsets.all(10.0),
                           margin: const EdgeInsets.all(10.0),
                           child: const Text(
@@ -297,8 +300,12 @@ class TabletScreen extends StatelessWidget {
                       ),
                       Expanded(
                         child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            color: Color.fromARGB(255, 22, 27, 34),
+                          ),
                           padding: const EdgeInsets.all(10.0),
-                          color: Color.fromARGB(255, 22, 27, 34),
+                      
                         margin: const EdgeInsets.all(10.0),
                         child: const Text(
                           "Introduce yourself with a profile README\nShare information about yourself by creating a profile README, which appears at the top of your profile page.",
@@ -307,7 +314,7 @@ class TabletScreen extends StatelessWidget {
                             fontSize: 14,
                           ),
                         ),
-                                            ),
+                        ),
                       ),
                     ],
                   ),

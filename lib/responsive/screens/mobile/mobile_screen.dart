@@ -281,6 +281,36 @@ class MobileScreen extends StatelessWidget {
               color: const Color.fromARGB(255, 22, 27, 34),
 
             ),
+            Container( 
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+                color: Color.fromARGB(255, 22, 27, 34),
+                ),
+              padding: const EdgeInsets.all(10.0),
+              margin: const EdgeInsets.all(10.0),
+              child: const Text(
+                "Start a new repository\nA repository contains all of your project's files, revision history, and collaborator discussion.",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 249, 249, 249),
+                  fontSize: 14,
+                ),
+              ),
+              ),
+                        Container( 
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+                color: Color.fromARGB(255, 22, 27, 34),
+                ),
+              padding: const EdgeInsets.all(10.0),
+              margin: const EdgeInsets.all(10.0),
+              child: const Text(
+                "Introduce yourself with a profile README\nShare information about yourself by creating a profile README, which appears at the top of your profile page.",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 249, 249, 249),
+                  fontSize: 14,
+                ),
+              ),
+              ),  
           ],
         ),
       ),
