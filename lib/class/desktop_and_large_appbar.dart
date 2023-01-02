@@ -172,12 +172,15 @@ class DesAndLarAppBar extends StatelessWidget {
                 ),
               ),
             ),
+            //add hero animation here
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
-              child: CircleAvatar(
-                radius: 20,
-                backgroundImage: const NetworkImage(
-                    'https://avatars.githubusercontent.com/u/47338871?v=4'),
+              padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 5),
+              child: TextButton(
+                onPressed: () => print('Avatar_button pressed ...'),
+                child: const CircleAvatar(
+                  backgroundImage: NetworkImage(
+                      'https://avatars.githubusercontent.com/u/47338871?v=4'),
+                ),
               ),
             ),
           ],
