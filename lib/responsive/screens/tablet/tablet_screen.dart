@@ -1,60 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:github_responsive/utils/colors.dart';
 
+import '../../../class/mobile_and_tablet_appbar.dart';
+
 class TabletScreen extends StatelessWidget {
   const TabletScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-      return SafeArea(
+    return SafeArea(
       child: Scaffold(
         backgroundColor: AppColors.primaryColor,
-        appBar: AppBar(
-          primary: false,
-          centerTitle: true,
-          backgroundColor: const Color.fromARGB(255, 22, 27, 34),
-          elevation: 0,
-          actions: [
-            IconButton(
-              icon: const Icon(
-                Icons.notifications,
-                color: Colors.white,
-                size: 30,
-              ),
-              onPressed: () {
-                showDialog(
-                  context: context,
-                  builder: (context) {
-                    return AlertDialog(
-                      title: const Text('Notifications'),
-                      content: const Text('You have no notifications :)'),
-                      actions: [
-                        TextButton(
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          child: const Text('OK'),
-                        ),
-                      ],
-                    );
-                  },
-                );
-              },
-            ),
-          ],
-          title: Padding(
-            padding: const EdgeInsets.only(top: 3, bottom: 0),
-            child: Image.asset(
-              'assets/images/logo/github_logo.png',
-              height: 35,
-              width: 35,
-            ),
+        appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(50),
+          child: MobAndTabAppBar(
+            title: const Text('Mobile Screen'),
+            backgroundColor: AppColors.secondaryColor,
+            appBar: AppBar(),
+            actions: const <Widget>[],
           ),
         ),
         //Drawer
         drawer: Drawer(
           //drawer opening from up to down
-    
+
           child: Container(
             color: AppColors.secondaryColor,
             child: ListView(
@@ -192,7 +161,7 @@ class TabletScreen extends StatelessWidget {
             ),
           ),
         ),
-    
+
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -202,14 +171,13 @@ class TabletScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 20, right: 20),
                   child: Row(
                     children: [
-                      Expanded( 
+                      Expanded(
                         child: Container(
                           margin: const EdgeInsets.all(10.0),
                           height: 40,
                           decoration: BoxDecoration(
                             color: const Color.fromARGB(255, 33, 40, 50),
                             borderRadius: BorderRadius.circular(5),
-                            
                           ),
                           child: Row(
                             children: const [
@@ -222,7 +190,7 @@ class TabletScreen extends StatelessWidget {
                               SizedBox(width: 10),
                               Expanded(
                                 child: TextField(
-                                    style: TextStyle(
+                                  style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 18,
                                   ),
@@ -251,28 +219,31 @@ class TabletScreen extends StatelessWidget {
                   children: const [
                     SizedBox(height: 10),
                     Padding(
-                      padding: EdgeInsets.only(left:10, bottom: 0, right: 10, top:10),//apply padding to all four sides
-                    child: 
-                    Text(
-                      'The home for all developers — including you.',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 30,
-                      ),
-                      textAlign: TextAlign.left,
-                    ),),
-                    SizedBox(height: 10),
-                    Padding(
-                      padding: EdgeInsets.only(left:10, bottom: 10, right: 10, top:0),
-                        
-                    child: 
-                    Text(
-                      'Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 166, 153, 153),
-                        fontSize: 14,
+                      padding: EdgeInsets.only(
+                          left: 10,
+                          bottom: 0,
+                          right: 10,
+                          top: 10), //apply padding to all four sides
+                      child: Text(
+                        'The home for all developers — including you.',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30,
+                        ),
+                        textAlign: TextAlign.left,
                       ),
                     ),
+                    SizedBox(height: 10),
+                    Padding(
+                      padding: EdgeInsets.only(
+                          left: 10, bottom: 10, right: 10, top: 0),
+                      child: Text(
+                        'Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 166, 153, 153),
+                          fontSize: 14,
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -282,7 +253,7 @@ class TabletScreen extends StatelessWidget {
                   Row(
                     children: [
                       Expanded(
-                        child: Container( 
+                        child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(5),
                             color: Color.fromARGB(255, 22, 27, 34),
@@ -305,15 +276,14 @@ class TabletScreen extends StatelessWidget {
                             color: Color.fromARGB(255, 22, 27, 34),
                           ),
                           padding: const EdgeInsets.all(10.0),
-                      
-                        margin: const EdgeInsets.all(10.0),
-                        child: const Text(
-                          "Introduce yourself with a profile README\nShare information about yourself by creating a profile README, which appears at the top of your profile page.",
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 249, 249, 249),
-                            fontSize: 14,
+                          margin: const EdgeInsets.all(10.0),
+                          child: const Text(
+                            "Introduce yourself with a profile README\nShare information about yourself by creating a profile README, which appears at the top of your profile page.",
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 249, 249, 249),
+                              fontSize: 14,
+                            ),
                           ),
-                        ),
                         ),
                       ),
                     ],
@@ -327,4 +297,3 @@ class TabletScreen extends StatelessWidget {
     );
   }
 }
-

@@ -29,16 +29,13 @@ class DesAndLarAppBar extends StatelessWidget {
           // fit: BoxFit.cover,
         ),
       ),
-      title: Row(
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          //add small text field
-          ConstrainedBox(
-            constraints: const BoxConstraints(
-              maxWidth: 250,
-              maxHeight: 40,
-            ),
-            child: Expanded(
+      title: ConstrainedBox(
+        constraints: const BoxConstraints(
+            maxWidth: 700, minWidth: 300, maxHeight: 40, minHeight: 40),
+        child: Row(
+          // mainAxisSize: MainAxisSize.max,
+          children: [
+            Expanded(
               flex: 1,
               child: Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
@@ -81,73 +78,73 @@ class DesAndLarAppBar extends StatelessWidget {
                 ),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
-            child: TextButton(
-              onPressed: () => print('Pull_request_button pressed ...'),
-              child: const Text(
-                'Pull requests',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  fontSize: 14,
+            Padding(
+              padding: const EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+              child: TextButton(
+                onPressed: () => print('Pull_request_button pressed ...'),
+                child: const Text(
+                  'Pull requests',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    fontSize: 14,
+                  ),
                 ),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
-            child: TextButton(
-              onPressed: () => print('Issues_button pressed ...'),
-              child: const Text(
-                'Issues',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  fontSize: 14,
+            Padding(
+              padding: const EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+              child: TextButton(
+                onPressed: () => print('Issues_button pressed ...'),
+                child: const Text(
+                  'Issues',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    fontSize: 14,
+                  ),
                 ),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
-            child: TextButton(
-              onPressed: () => print('Codespaces_button pressed ...'),
-              child: const Text(
-                'Codespaces',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  fontSize: 14,
+            Padding(
+              padding: const EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+              child: TextButton(
+                onPressed: () => print('Codespaces_button pressed ...'),
+                child: const Text(
+                  'Codespaces',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    fontSize: 14,
+                  ),
                 ),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
-            child: TextButton(
-              onPressed: () => print('Marketplace_button pressed ...'),
-              child: const Text(
-                'Marketplace',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  fontSize: 14,
+            Padding(
+              padding: const EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+              child: TextButton(
+                onPressed: () => print('Marketplace_button pressed ...'),
+                child: const Text(
+                  'Marketplace',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    fontSize: 14,
+                  ),
                 ),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
-            child: TextButton(
-              onPressed: () => print('Explore_button pressed ...'),
-              child: const Text(
-                'Explore',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  fontSize: 14,
+            Padding(
+              padding: const EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+              child: TextButton(
+                onPressed: () => print('Explore_button pressed ...'),
+                child: const Text(
+                  'Explore',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    fontSize: 14,
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
       actions: [
         Row(

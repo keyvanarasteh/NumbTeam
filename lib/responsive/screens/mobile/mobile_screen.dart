@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:github_responsive/class/mobile_and_tablet_appbar.dart';
 import '../../../utils/colors.dart';
 
 class MobileScreen extends StatelessWidget {
@@ -9,53 +10,16 @@ class MobileScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: AppColors.primaryColor,
-        appBar: AppBar(
-          primary: false,
-          centerTitle: true,
-          backgroundColor: AppColors.secondaryColor,
-          elevation: 0,
-          actions: [
-            IconButton(
-              icon: const Icon(
-                Icons.notifications,
-                color: Colors.white,
-                size: 30,
-              ),
-              //add on pressed alert dialog
-              onPressed: () {
-                showDialog(
-                  context: context,
-                  builder: (context) {
-                    return AlertDialog(
-                      title: const Text('Notifications'),
-                      content: const Text('You have no notifications :)'),
-                      actions: [
-                        TextButton(
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          child: const Text('OK'),
-                        ),
-                      ],
-                    );
-                  },
-                );
-              },
-            ),
-          ],
-          title: Padding(
-            padding: const EdgeInsets.only(top: 3, bottom: 0),
-            child: Image.asset(
-              'assets/images/logo/github_logo.png',
-              height: 35,
-              width: 35,
-            ),
+        appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(50),
+          child: MobAndTabAppBar(
+            title: const Text('Mobile Screen'),
+            backgroundColor: AppColors.secondaryColor,
+            appBar: AppBar(),
+            actions: const <Widget>[],
           ),
         ),
-        //Drawer
         drawer: Drawer(
-          //drawer opening from up to down
-    
           child: Container(
             color: AppColors.secondaryColor,
             child: ListView(
@@ -193,7 +157,6 @@ class MobileScreen extends StatelessWidget {
             ),
           ),
         ),
-    
         body: Column(
           children: [
             Container(
@@ -209,7 +172,6 @@ class MobileScreen extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: const Color.fromARGB(255, 33, 40, 50),
                           borderRadius: BorderRadius.circular(5),
-                          
                         ),
                         child: Row(
                           children: const [
@@ -222,7 +184,7 @@ class MobileScreen extends StatelessWidget {
                             SizedBox(width: 10),
                             Expanded(
                               child: TextField(
-                                  style: TextStyle(
+                                style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 18,
                                 ),
@@ -251,41 +213,43 @@ class MobileScreen extends StatelessWidget {
                 children: const [
                   SizedBox(height: 10),
                   Padding(
-                    padding: EdgeInsets.only(left:10, bottom: 0, right: 10, top:10),//apply padding to all four sides
-                  child: 
-                  Text(
-                    'The home for all developers — including you.',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 30,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),),
-                  SizedBox(height: 10),
-                  Padding(
-                    padding: EdgeInsets.only(left:10, bottom: 10, right: 10, top:0),
-                      
-                  child: 
-                  Text(
-                    'Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.',
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 166, 153, 153),
-                      fontSize: 14,
+                    padding: EdgeInsets.only(
+                        left: 10,
+                        bottom: 0,
+                        right: 10,
+                        top: 10), //apply padding to all four sides
+                    child: Text(
+                      'The home for all developers — including you.',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 30,
+                      ),
+                      textAlign: TextAlign.left,
                     ),
                   ),
+                  SizedBox(height: 10),
+                  Padding(
+                    padding: EdgeInsets.only(
+                        left: 10, bottom: 10, right: 10, top: 0),
+                    child: Text(
+                      'Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.',
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 166, 153, 153),
+                        fontSize: 14,
+                      ),
+                    ),
                   ),
                 ],
               ),
             ),
             Container(
               color: const Color.fromARGB(255, 22, 27, 34),
-
             ),
-            Container( 
+            Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
                 color: Color.fromARGB(255, 22, 27, 34),
-                ),
+              ),
               padding: const EdgeInsets.all(10.0),
               margin: const EdgeInsets.all(10.0),
               child: const Text(
@@ -295,12 +259,12 @@ class MobileScreen extends StatelessWidget {
                   fontSize: 14,
                 ),
               ),
-              ),
-                        Container( 
+            ),
+            Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
                 color: Color.fromARGB(255, 22, 27, 34),
-                ),
+              ),
               padding: const EdgeInsets.all(10.0),
               margin: const EdgeInsets.all(10.0),
               child: const Text(
@@ -310,7 +274,7 @@ class MobileScreen extends StatelessWidget {
                   fontSize: 14,
                 ),
               ),
-              ),  
+            ),
           ],
         ),
       ),
