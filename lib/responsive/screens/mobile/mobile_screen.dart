@@ -252,12 +252,83 @@ class MobileScreen extends StatelessWidget {
               ),
               padding: const EdgeInsets.all(10.0),
               margin: const EdgeInsets.all(10.0),
-              child: const Text(
-                "Start a new repository\nA repository contains all of your project's files, revision history, and collaborator discussion.",
-                style: TextStyle(
-                  color: Color.fromARGB(255, 249, 249, 249),
-                  fontSize: 14,
+              child: Column(
+                children: [
+                  const Text(
+                    "Start a new repository\nA repository contains all of your project's files, revision history, and collaborator discussion.",
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 249, 249, 249),
+                      fontSize: 14,
+                    ),
+                  ),
+                  SizedBox(height: 5),
+                  Row(
+                    children: [
+                      Text("Keyvanarasteh/"),
+                      ConstrainedBox(
+        constraints: const BoxConstraints(
+            maxWidth: 316, minWidth: 300, maxHeight: 35, minHeight: 35),
+        child: Row(
+          children: [
+            Expanded(
+              flex: 1,
+              child: Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+                child: TextFormField(
+                  controller: TextEditingController(),
+                  obscureText: false,
+                  decoration: InputDecoration(
+                    labelText: 'name your new repository',
+                    labelStyle: const TextStyle(
+                      color: Color(0xFF8B949E),
+                      fontSize: 14,
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: const BorderSide(
+                        color: Color(0xFF24292E),
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: const BorderSide(
+                        color: Color(0xFF24292E),
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                    filled: true,
+                    fillColor: const Color(0xFF30363D),
+                  ),
+                  style: const TextStyle(
+                    color: Color(0xFFC9D1D9),
+                    fontSize: 14,
+                  ),
+                  keyboardType: TextInputType.text,
                 ),
+              ),
+            ),],),),
+                    ],
+                  ),
+                  SizedBox(height: 5),
+                  Row(
+                    children: [
+                      ElevatedButton(
+                                        onPressed: () {},
+                                        child:Text('Create a new repository'), // <-- Text
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor:
+                                              Color.fromARGB(255, 35,134,54),
+                                          padding: EdgeInsets.symmetric(
+                                              horizontal: 10, vertical: 5),
+                                          textStyle: TextStyle(
+                                              fontSize: 10,
+                                              ),
+                                        ),
+                                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
             Container(
@@ -267,12 +338,16 @@ class MobileScreen extends StatelessWidget {
               ),
               padding: const EdgeInsets.all(10.0),
               margin: const EdgeInsets.all(10.0),
-              child: const Text(
-                "Introduce yourself with a profile README\nShare information about yourself by creating a profile README, which appears at the top of your profile page.",
-                style: TextStyle(
-                  color: Color.fromARGB(255, 249, 249, 249),
-                  fontSize: 14,
-                ),
+              child: Column(
+                children: [
+                  const Text(
+                    "Introduce yourself with a profile README\nShare information about yourself by creating a profile README, which appears at the top of your profile page.",
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 249, 249, 249),
+                      fontSize: 14,
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
