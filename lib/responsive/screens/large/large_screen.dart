@@ -1,11 +1,26 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../class/desktop_and_large_appbar.dart';
 import '../../../utils/colors.dart';
 
-class LargeScreen extends StatelessWidget {
+const List<String> list = <String>[
+  'Merhaba',
+  'Ben',
+  'Flutteri',
+  'Cok',
+  'Seviyorum',
+];
+double _value = 20;
+
+class LargeScreen extends StatefulWidget {
   const LargeScreen({super.key});
 
+  @override
+  State<LargeScreen> createState() => _LargeScreenState();
+}
+
+class _LargeScreenState extends State<LargeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,10 +40,10 @@ class LargeScreen extends StatelessWidget {
               child: Row(
             children: <Widget>[
               Expanded(
-                flex: 2,
+                flex: 3,
                 child: Container(
                   height: double.infinity,
-                  color: Colors.red,
+                  color: AppColors.secondaryColor,
                   child: Column(
                     children: [
                       SizedBox(
@@ -229,52 +244,217 @@ class LargeScreen extends StatelessWidget {
               Expanded(
                 flex: 9,
                 child: Container(
+                  color: AppColors.primaryColor,
                   height: double.infinity,
-                  color: Colors.green,
-                  child: GridView.count(crossAxisCount: 3, children: <Widget>[
-                    Container(
-                      color: Colors.teal,
-                      child: Center(
-                        child: Text('1'),
+                  child: GridView.count(
+                    crossAxisCount: 3,
+                    children: <Widget>[
+                      Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.cyanAccent,
+                            width: 2,
+                          ),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Chip Widget Test Area"),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Chip(
+                              label: Text('This is a chip widget'),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                    Container(
-                      color: Colors.blue,
-                      child: Center(
-                        child: Text('2'),
+                      Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.blue,
+                            width: 2,
+                          ),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("DropdownButton Widget Test Area"),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            DropdownButtonExample(),
+                          ],
+                        ),
                       ),
-                    ),
-                    Container(
-                      color: Colors.yellow,
-                      child: Center(
-                        child: Text('3'),
+                      Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.red,
+                            width: 2,
+                          ),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("ClipRRect Widget Test Area"),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(20),
+                              child: Image.network(
+                                'https://avatars.githubusercontent.com/u/92443831?v=4',
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                    Container(
-                      color: Colors.green,
-                      child: Center(
-                        child: Text('4'),
+                      Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.green,
+                            width: 2,
+                          ),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text("Card Widget Test Area"),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Card(
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  const ListTile(
+                                    leading: Icon(Icons.album),
+                                    title: Text('The Enchanted Nightingale'),
+                                    subtitle: Text(
+                                        'Music by Julie Gable. Lyrics by Sidney Stein.'),
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: <Widget>[
+                                      TextButton(
+                                        child: const Text('BUY TICKETS'),
+                                        onPressed: () {/* ... */},
+                                      ),
+                                      const SizedBox(width: 8),
+                                      TextButton(
+                                        child: const Text('LISTEN'),
+                                        onPressed: () {/* ... */},
+                                      ),
+                                      const SizedBox(width: 8),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                    Container(
-                      color: Colors.purple,
-                      child: Center(
-                        child: Text('5'),
+                      Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.yellow,
+                            width: 2,
+                          ),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Slider Widget Test Area"),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            CupertinoSlider(
+                              min: 0.0,
+                              max: 100.0,
+                              value: _value,
+                              onChanged: (value) {
+                                setState(() {
+                                  _value = value;
+                                });
+                              },
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                    Container(
-                      color: Colors.red,
-                      child: Center(
-                        child: Text('6'),
+                      Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.purple,
+                            width: 2,
+                          ),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("FloatingActionButton Widget Test Area"),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            FloatingActionButton(
+                              onPressed: () {
+                                // Add your onPressed code here!
+                              },
+                              child: const Icon(Icons.add),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  ]),
+                    ],
+                  ),
                 ),
               ),
             ],
           )),
         ),
       ),
+    );
+  }
+}
+
+class DropdownButtonExample extends StatefulWidget {
+  const DropdownButtonExample({super.key});
+
+  @override
+  State<DropdownButtonExample> createState() => _DropdownButtonExampleState();
+}
+
+class _DropdownButtonExampleState extends State<DropdownButtonExample> {
+  String dropdownValue = list.first;
+
+  @override
+  Widget build(BuildContext context) {
+    return DropdownButton<String>(
+      value: dropdownValue,
+      icon: const Icon(Icons.arrow_downward),
+      elevation: 16,
+      style: const TextStyle(color: Colors.deepPurple),
+      underline: Container(
+        height: 2,
+        color: Colors.deepPurpleAccent,
+      ),
+      onChanged: (String? value) {
+        // This is called when the user selects an item.
+        setState(() {
+          dropdownValue = value!;
+        });
+      },
+      items: list.map<DropdownMenuItem<String>>((String value) {
+        return DropdownMenuItem<String>(
+          value: value,
+          child: Text(value),
+        );
+      }).toList(),
     );
   }
 }
