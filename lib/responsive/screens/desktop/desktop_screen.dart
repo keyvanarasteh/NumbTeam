@@ -340,9 +340,9 @@ class _DesktopScreenState extends State<DesktopScreen> {
                                 children: <Widget>[
                                   const ListTile(
                                     leading: Icon(Icons.album),
-                                    title: Text('The Enchanted Nightingale'),
+                                    title: Text('Flutter Song'),
                                     subtitle: Text(
-                                        'Music by Julie Gable. Lyrics by Sidney Stein.'),
+                                        'Music by MehmetJank. Lyrics by Seckin111.'),
                                   ),
                                   Row(
                                     mainAxisAlignment:
