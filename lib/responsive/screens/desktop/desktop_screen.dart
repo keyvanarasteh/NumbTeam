@@ -45,7 +45,7 @@ class _DesktopScreenState extends State<DesktopScreen> {
                 flex: 4,
                 child: Container(
                   height: double.infinity,
-                  color: Colors.red,
+                  color:AppColors.secondaryColor,
                   child: Column(
                     children: [
                       SizedBox(
@@ -251,6 +251,7 @@ class _DesktopScreenState extends State<DesktopScreen> {
                     crossAxisCount: 2,
                     children: <Widget>[
                       Container(
+                        margin: EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           border: Border.all(
                             color: Colors.cyanAccent,
@@ -271,9 +272,10 @@ class _DesktopScreenState extends State<DesktopScreen> {
                         ),
                       ),
                       Container(
+                        margin: EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: Colors.blue,
+                            color: Colors.cyanAccent,
                             width: 2,
                           ),
                         ),
@@ -289,9 +291,10 @@ class _DesktopScreenState extends State<DesktopScreen> {
                         ),
                       ),
                       Container(
+                        margin: EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: Colors.red,
+                            color: Colors.cyanAccent,
                             width: 2,
                           ),
                         ),
@@ -302,19 +305,22 @@ class _DesktopScreenState extends State<DesktopScreen> {
                             SizedBox(
                               height: 10,
                             ),
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(20),
-                              child: Image.network(
-                                  'https://avatars.githubusercontent.com/u/92443831?v=4',
-                                  fit: BoxFit.scaleDown),
+                            Expanded(
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20),
+                                child: Image.network(
+                                    'https://avatars.githubusercontent.com/u/92443831?v=4',
+                                    ),
+                              ),
                             ),
                           ],
                         ),
                       ),
                       Container(
+                        margin: EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: Colors.green,
+                           color: Colors.cyanAccent,
                             width: 2,
                           ),
                         ),
@@ -361,6 +367,14 @@ class _DesktopScreenState extends State<DesktopScreen> {
                         ),
                       ),
                       Container(
+                        
+                        margin: EdgeInsets.all(8),
+                         decoration: BoxDecoration(
+                          border: Border.all(
+                           color: Colors.cyanAccent,
+                            width: 2,
+                          ),
+                        ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -382,16 +396,26 @@ class _DesktopScreenState extends State<DesktopScreen> {
                         ),
                       ),
                       Container(
-                        decoration: BoxDecoration(
+                        margin: EdgeInsets.all(8),
+                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: Colors.yellow,
+                           color: Colors.cyanAccent,
                             width: 2,
                           ),
                         ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text("Slider Widget Test Area"),
+                            Text("FloatingActionButton Widget Test Area"),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            FloatingActionButton(
+                              onPressed: () {
+                                // Add your onPressed code here!
+                              },
+                              child: const Icon(Icons.add),
+                            ),
                           ],
                         ),
                       ),

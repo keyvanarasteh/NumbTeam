@@ -250,6 +250,7 @@ class _LargeScreenState extends State<LargeScreen> {
                     crossAxisCount: 3,
                     children: <Widget>[
                       Container(
+                        margin: EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           border: Border.all(
                             color: Colors.cyanAccent,
@@ -270,9 +271,10 @@ class _LargeScreenState extends State<LargeScreen> {
                         ),
                       ),
                       Container(
+                        margin: EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: Colors.blue,
+                            color: Colors.cyanAccent,
                             width: 2,
                           ),
                         ),
@@ -288,9 +290,10 @@ class _LargeScreenState extends State<LargeScreen> {
                         ),
                       ),
                       Container(
+                        margin: EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: Colors.red,
+                            color: Colors.cyanAccent,
                             width: 2,
                           ),
                         ),
@@ -301,20 +304,22 @@ class _LargeScreenState extends State<LargeScreen> {
                             SizedBox(
                               height: 10,
                             ),
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(20),
-                              child: Image.network(
-                                'https://avatars.githubusercontent.com/u/92443831?v=4',
-                                fit: BoxFit.cover,
+                            Expanded(
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20),
+                                child: Image.network(
+                                  'https://avatars.githubusercontent.com/u/92443831?v=4',
+                                ),
                               ),
                             ),
                           ],
                         ),
                       ),
                       Container(
+                        margin: EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: Colors.green,
+                            color: Colors.cyanAccent,
                             width: 2,
                           ),
                         ),
@@ -361,9 +366,10 @@ class _LargeScreenState extends State<LargeScreen> {
                         ),
                       ),
                       Container(
+                        margin: EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: Colors.yellow,
+                            color: Colors.cyanAccent,
                             width: 2,
                           ),
                         ),
@@ -388,9 +394,10 @@ class _LargeScreenState extends State<LargeScreen> {
                         ),
                       ),
                       Container(
+                        margin: EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: Colors.purple,
+                            color: Colors.cyanAccent,
                             width: 2,
                           ),
                         ),
