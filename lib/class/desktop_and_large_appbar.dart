@@ -153,7 +153,25 @@ class DesAndLarAppBar extends StatelessWidget {
             Padding(
               padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 5),
               child: TextButton(
-                onPressed: () => print('Notification_button pressed ...'),
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: const Text('Notifications'),
+                        content: const Text('You have no notifications :)'),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            child: const Text('OK'),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                },
                 child: const Icon(
                   Icons.notifications,
                   color: Color.fromARGB(255, 255, 255, 255),
