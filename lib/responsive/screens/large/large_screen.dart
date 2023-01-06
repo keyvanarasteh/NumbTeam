@@ -5,6 +5,7 @@ import '../../../class/desktop_and_large_appbar.dart';
 import '../../../utils/colors.dart';
 import '../../../widgets/my_checkbox.dart';
 import '../../../widgets/my_dropdownbutton.dart';
+import '../../../widgets/my_switch.dart';
 
 double _value = 20;
 
@@ -431,6 +432,64 @@ class _LargeScreenState extends State<LargeScreen> {
                               height: 10,
                             ),
                             MyStatefulWidget(),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.cyanAccent,
+                            width: 2,
+                          ),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                                "Circular Progress Indicator Widget Test Area"),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            CircularProgressIndicator(),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.cyanAccent,
+                            width: 2,
+                          ),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Linear Progress Indicator Widget Test Area"),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            LinearProgressIndicator(),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.cyanAccent,
+                            width: 2,
+                          ),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Switch Widget Test Area"),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            SwitchExample(),
                           ],
                         ),
                       ),

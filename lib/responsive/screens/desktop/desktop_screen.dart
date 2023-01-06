@@ -7,6 +7,7 @@ import '../../../class/desktop_and_large_appbar.dart';
 import '../../../utils/colors.dart';
 import '../../../widgets/my_checkbox.dart';
 import '../../../widgets/my_dropdownbutton.dart';
+import '../../../widgets/my_switch.dart';
 
 double _value = 20;
 
@@ -241,6 +242,7 @@ class _DesktopScreenState extends State<DesktopScreen> {
               Expanded(
                 flex: 9,
                 child: Container(
+                  color: AppColors.primaryColor,
                   height: double.infinity,
                   child: GridView.count(
                     crossAxisCount: 2,
@@ -430,6 +432,65 @@ class _DesktopScreenState extends State<DesktopScreen> {
                               height: 10,
                             ),
                             MyStatefulWidget(),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.cyanAccent,
+                            width: 2,
+                          ),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                                "Circular Progress Indicator Widget Test Area"),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            CircularProgressIndicator(),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.cyanAccent,
+                            width: 2,
+                          ),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Linear Progress Indicator Widget Test Area"),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            LinearProgressIndicator(),
+                          ],
+                        ),
+                      ),
+                      //add switch widget
+                      Container(
+                        margin: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.cyanAccent,
+                            width: 2,
+                          ),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Switch Widget Test Area"),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            SwitchExample(),
                           ],
                         ),
                       ),
