@@ -3,14 +3,9 @@ import 'package:flutter/material.dart';
 
 import '../../../class/desktop_and_large_appbar.dart';
 import '../../../utils/colors.dart';
+import '../../../widgets/my_checkbox.dart';
+import '../../../widgets/my_dropdownbutton.dart';
 
-const List<String> list = <String>[
-  'Merhaba',
-  'Ben',
-  'Flutteri',
-  'Cok',
-  'Seviyorum',
-];
 double _value = 20;
 
 class LargeScreen extends StatefulWidget {
@@ -300,13 +295,16 @@ class _LargeScreenState extends State<LargeScreen> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
+                            SizedBox(
+                              height: 10,
+                            ),
                             Text("ClipRRect Widget Test Area"),
                             SizedBox(
                               height: 10,
                             ),
                             Expanded(
                               child: ClipRRect(
-                                borderRadius: BorderRadius.circular(20),
+                                borderRadius: BorderRadius.circular(75),
                                 child: Image.network(
                                   'https://avatars.githubusercontent.com/u/92443831?v=4',
                                 ),
@@ -337,7 +335,7 @@ class _LargeScreenState extends State<LargeScreen> {
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
-                                 const ListTile(
+                                  const ListTile(
                                     leading: Icon(Icons.album),
                                     title: Text('Flutter Song'),
                                     subtitle: Text(
@@ -417,6 +415,25 @@ class _LargeScreenState extends State<LargeScreen> {
                           ],
                         ),
                       ),
+                      Container(
+                        margin: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.cyanAccent,
+                            width: 2,
+                          ),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Checkbox Widget Test Area"),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            MyStatefulWidget(),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -425,43 +442,6 @@ class _LargeScreenState extends State<LargeScreen> {
           )),
         ),
       ),
-    );
-  }
-}
-
-class DropdownButtonExample extends StatefulWidget {
-  const DropdownButtonExample({super.key});
-
-  @override
-  State<DropdownButtonExample> createState() => _DropdownButtonExampleState();
-}
-
-class _DropdownButtonExampleState extends State<DropdownButtonExample> {
-  String dropdownValue = list.first;
-
-  @override
-  Widget build(BuildContext context) {
-    return DropdownButton<String>(
-      value: dropdownValue,
-      icon: const Icon(Icons.arrow_downward),
-      elevation: 16,
-      style: const TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
-      underline: Container(
-        height: 2,
-        color: Colors.deepPurpleAccent,
-      ),
-      onChanged: (String? value) {
-        // This is called when the user selects an item.
-        setState(() {
-          dropdownValue = value!;
-        });
-      },
-      items: list.map<DropdownMenuItem<String>>((String value) {
-        return DropdownMenuItem<String>(
-          value: value,
-          child: Text(value),
-        );
-      }).toList(),
     );
   }
 }

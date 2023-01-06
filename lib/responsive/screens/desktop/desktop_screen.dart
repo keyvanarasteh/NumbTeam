@@ -5,14 +5,9 @@ import 'package:flutter/material.dart';
 import '../../../class/desktop_and_large_appbar.dart';
 
 import '../../../utils/colors.dart';
+import '../../../widgets/my_checkbox.dart';
+import '../../../widgets/my_dropdownbutton.dart';
 
-const List<String> list = <String>[
-  'Merhaba',
-  'Ben',
-  'Flutteri',
-  'Cok',
-  'Seviyorum',
-];
 double _value = 20;
 
 class DesktopScreen extends StatefulWidget {
@@ -45,7 +40,7 @@ class _DesktopScreenState extends State<DesktopScreen> {
                 flex: 4,
                 child: Container(
                   height: double.infinity,
-                  color:AppColors.secondaryColor,
+                  color: AppColors.secondaryColor,
                   child: Column(
                     children: [
                       SizedBox(
@@ -307,10 +302,10 @@ class _DesktopScreenState extends State<DesktopScreen> {
                             ),
                             Expanded(
                               child: ClipRRect(
-                                borderRadius: BorderRadius.circular(20),
+                                borderRadius: BorderRadius.circular(25),
                                 child: Image.network(
-                                    'https://avatars.githubusercontent.com/u/92443831?v=4',
-                                    ),
+                                  'https://avatars.githubusercontent.com/u/92443831?v=4',
+                                ),
                               ),
                             ),
                           ],
@@ -320,7 +315,7 @@ class _DesktopScreenState extends State<DesktopScreen> {
                         margin: EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           border: Border.all(
-                           color: Colors.cyanAccent,
+                            color: Colors.cyanAccent,
                             width: 2,
                           ),
                         ),
@@ -367,11 +362,10 @@ class _DesktopScreenState extends State<DesktopScreen> {
                         ),
                       ),
                       Container(
-                        
                         margin: EdgeInsets.all(8),
-                         decoration: BoxDecoration(
+                        decoration: BoxDecoration(
                           border: Border.all(
-                           color: Colors.cyanAccent,
+                            color: Colors.cyanAccent,
                             width: 2,
                           ),
                         ),
@@ -397,9 +391,9 @@ class _DesktopScreenState extends State<DesktopScreen> {
                       ),
                       Container(
                         margin: EdgeInsets.all(8),
-                         decoration: BoxDecoration(
+                        decoration: BoxDecoration(
                           border: Border.all(
-                           color: Colors.cyanAccent,
+                            color: Colors.cyanAccent,
                             width: 2,
                           ),
                         ),
@@ -419,6 +413,26 @@ class _DesktopScreenState extends State<DesktopScreen> {
                           ],
                         ),
                       ),
+                      //add checkbox widget
+                      Container(
+                        margin: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.cyanAccent,
+                            width: 2,
+                          ),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Checkbox Widget Test Area"),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            MyStatefulWidget(),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -427,43 +441,6 @@ class _DesktopScreenState extends State<DesktopScreen> {
           )),
         ),
       ),
-    );
-  }
-}
-
-class DropdownButtonExample extends StatefulWidget {
-  const DropdownButtonExample({super.key});
-
-  @override
-  State<DropdownButtonExample> createState() => _DropdownButtonExampleState();
-}
-
-class _DropdownButtonExampleState extends State<DropdownButtonExample> {
-  String dropdownValue = list.first;
-
-  @override
-  Widget build(BuildContext context) {
-    return DropdownButton<String>(
-      value: dropdownValue,
-      icon: const Icon(Icons.arrow_downward),
-      elevation: 16,
-      style: const TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
-      underline: Container(
-        height: 2,
-        color: Color.fromARGB(255, 255, 255, 255),
-      ),
-      onChanged: (String? value) {
-        // This is called when the user selects an item.
-        setState(() {
-          dropdownValue = value!;
-        });
-      },
-      items: list.map<DropdownMenuItem<String>>((String value) {
-        return DropdownMenuItem<String>(
-          value: value,
-          child: Text(value),
-        );
-      }).toList(),
     );
   }
 }
