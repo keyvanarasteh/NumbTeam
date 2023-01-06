@@ -30,7 +30,6 @@ class _LargeScreenState extends State<LargeScreen> {
         ),
       ),
       body: SafeArea(
-<<<<<<< Updated upstream
         child: Center(
           child: Container(
               child: Row(
@@ -45,19 +44,6 @@ class _LargeScreenState extends State<LargeScreen> {
                       SizedBox(
                         height: 10,
                       ),
-=======
-        child: Container(
-          color: AppColors.secondaryColor,
-          child: Row(
-            children: [
-              Expanded(
-                flex: 2,
-                child: Container(
-                  color: AppColors.secondaryColor,
-                  child: Column(
-                    children: [
-                      SizedBox(height: 10),
->>>>>>> Stashed changes
                       Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -68,11 +54,7 @@ class _LargeScreenState extends State<LargeScreen> {
                             icon: Icon(
                               // <-- Icon
                               Icons.add,
-<<<<<<< Updated upstream
                               size: 20.0,
-=======
-                              size: 24.0,
->>>>>>> Stashed changes
                             ),
                             label: Text('New'), // <-- Text
                             style: ElevatedButton.styleFrom(
@@ -85,18 +67,9 @@ class _LargeScreenState extends State<LargeScreen> {
                           ),
                         ],
                       ),
-<<<<<<< Updated upstream
                       Row(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-=======
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
->>>>>>> Stashed changes
                         children: [
                           Container(
                             width: 40,
@@ -111,11 +84,7 @@ class _LargeScreenState extends State<LargeScreen> {
                             ),
                           ),
                           SizedBox(
-<<<<<<< Updated upstream
                             width: 30,
-=======
-                            width: 10,
->>>>>>> Stashed changes
                           ),
                           Align(
                             alignment: Alignment.center,
@@ -128,16 +97,8 @@ class _LargeScreenState extends State<LargeScreen> {
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.min,
-<<<<<<< Updated upstream
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-=======
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          SizedBox(
-                            width: 30,
-                          ),
->>>>>>> Stashed changes
                           Container(
                             width: 40,
                             height: 40,
@@ -151,11 +112,7 @@ class _LargeScreenState extends State<LargeScreen> {
                             ),
                           ),
                           SizedBox(
-<<<<<<< Updated upstream
                             width: 30,
-=======
-                            width: 10,
->>>>>>> Stashed changes
                           ),
                           Align(
                             alignment: Alignment.center,
@@ -168,11 +125,7 @@ class _LargeScreenState extends State<LargeScreen> {
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.min,
-<<<<<<< Updated upstream
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-=======
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
->>>>>>> Stashed changes
                         children: [
                           Container(
                             width: 40,
@@ -182,28 +135,16 @@ class _LargeScreenState extends State<LargeScreen> {
                               shape: BoxShape.circle,
                             ),
                             child: Image.network(
-<<<<<<< Updated upstream
                               'https://avatars.githubusercontent.com/u/92443831?v=4',
-=======
-                              'https://avatars.githubusercontent.com/u/16303698?v=4',
->>>>>>> Stashed changes
                               fit: BoxFit.cover,
                             ),
                           ),
                           SizedBox(
-<<<<<<< Updated upstream
                             width: 30,
                           ),
                           Align(
                             alignment: Alignment.center,
                             child: Text('MehmetJank/Flutter-UI'),
-=======
-                            width: 10,
-                          ),
-                          Align(
-                            alignment: Alignment.center,
-                            child: Text('keyvanarasteh/Flutter'),
->>>>>>> Stashed changes
                           )
                         ],
                       ),
@@ -212,11 +153,7 @@ class _LargeScreenState extends State<LargeScreen> {
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.min,
-<<<<<<< Updated upstream
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-=======
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
->>>>>>> Stashed changes
                         children: [
                           Container(
                             width: 40,
@@ -226,28 +163,16 @@ class _LargeScreenState extends State<LargeScreen> {
                               shape: BoxShape.circle,
                             ),
                             child: Image.network(
-<<<<<<< Updated upstream
                               'https://avatars.githubusercontent.com/u/115549152?v=4',
-=======
-                              'https://avatars.githubusercontent.com/u/92443831?v=4',
->>>>>>> Stashed changes
                               fit: BoxFit.cover,
                             ),
                           ),
                           SizedBox(
-<<<<<<< Updated upstream
                             width: 30,
                           ),
                           Align(
                             alignment: Alignment.center,
                             child: Text('seckin111/I-Love-Flutter<3'),
-=======
-                            width: 10,
-                          ),
-                          Align(
-                            alignment: Alignment.center,
-                            child: Text('MehmetJank/MovieApp'),
->>>>>>> Stashed changes
                           )
                         ],
                       ),
@@ -256,11 +181,7 @@ class _LargeScreenState extends State<LargeScreen> {
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.min,
-<<<<<<< Updated upstream
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-=======
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
->>>>>>> Stashed changes
                         children: [
                           Container(
                             width: 40,
@@ -270,28 +191,16 @@ class _LargeScreenState extends State<LargeScreen> {
                               shape: BoxShape.circle,
                             ),
                             child: Image.network(
-<<<<<<< Updated upstream
                               'https://avatars.githubusercontent.com/u/47338871?v=4',
-=======
-                              'https://avatars.githubusercontent.com/u/115549152?v=4',
->>>>>>> Stashed changes
                               fit: BoxFit.cover,
                             ),
                           ),
                           SizedBox(
-<<<<<<< Updated upstream
                             width: 30,
                           ),
                           Align(
                             alignment: Alignment.center,
                             child: Text('ElonMusk/SpaceX'),
-=======
-                            width: 10,
-                          ),
-                          Align(
-                            alignment: Alignment.center,
-                            child: Text('seckin111/I-Love-Flutter<3'),
->>>>>>> Stashed changes
                           )
                         ],
                       ),
@@ -300,11 +209,7 @@ class _LargeScreenState extends State<LargeScreen> {
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.min,
-<<<<<<< Updated upstream
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-=======
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
->>>>>>> Stashed changes
                         children: [
                           Container(
                             width: 40,
@@ -314,16 +219,11 @@ class _LargeScreenState extends State<LargeScreen> {
                               shape: BoxShape.circle,
                             ),
                             child: Image.network(
-<<<<<<< Updated upstream
                               'https://avatars.githubusercontent.com/u/16303698?v=4',
-=======
-                              'https://avatars.githubusercontent.com/u/47338871?v=4',
->>>>>>> Stashed changes
                               fit: BoxFit.cover,
                             ),
                           ),
                           SizedBox(
-<<<<<<< Updated upstream
                             width: 30,
                           ),
                           Align(
@@ -533,31 +433,13 @@ class _LargeScreenState extends State<LargeScreen> {
                             MyStatefulWidget(),
                           ],
                         ),
-=======
-                            width: 10,
-                          ),
-                          Align(
-                            alignment: Alignment.center,
-                            child: Text('ElonMusk/Tesla_AI_Engine'),
-                          )
-                        ],
->>>>>>> Stashed changes
                       ),
                     ],
                   ),
                 ),
               ),
-<<<<<<< Updated upstream
             ],
           )),
-=======
-              Expanded(
-                flex: 10,
-                child: Container(color: Colors.blue),
-              ),
-            ],
-          ),
->>>>>>> Stashed changes
         ),
       ),
     );
