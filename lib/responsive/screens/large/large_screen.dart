@@ -53,7 +53,7 @@ class _LargeScreenState extends State<LargeScreen> {
                               'https://avatars.githubusercontent.com/u/16303698?v=4'),
                         ),
                         title: const Text(
-                          'keyvanarasteh/NumbTeam',
+                          'keyvanarasteh/Flutter51',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 14,
@@ -96,6 +96,48 @@ class _LargeScreenState extends State<LargeScreen> {
                         ),
                         title: const Text(
                           'seckin111/I-Love-Flutter<3',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ),
+                      ListTile(
+                        leading: const CircleAvatar(
+                          radius: 14,
+                          backgroundImage: NetworkImage(
+                              'https://avatars.githubusercontent.com/u/115549152?v=4'),
+                        ),
+                        title: const Text(
+                          'seckin111/Hesap-Makinesi',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ),
+                      ListTile(
+                        leading: const CircleAvatar(
+                          radius: 14,
+                          backgroundImage: NetworkImage(
+                              'https://avatars.githubusercontent.com/u/92443831?v=4'),
+                        ),
+                        title: const Text(
+                          'MehmetJank/Bitirme_projesi',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ),
+                      ListTile(
+                        leading: const CircleAvatar(
+                          radius: 14,
+                          backgroundImage: NetworkImage(
+                              'https://avatars.githubusercontent.com/u/16303698?v=4'),
+                        ),
+                        title: const Text(
+                          'Keyvanarasteh/binance_profit',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 14,
