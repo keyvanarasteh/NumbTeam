@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:github_responsive/widgets/my_customcontainer.dart';
 
 import '../../../class/desktop_and_large_appbar.dart';
 import '../../../utils/colors.dart';
@@ -8,6 +9,8 @@ import '../../../widgets/my_dropdownbutton.dart';
 import '../../../widgets/my_switch.dart';
 
 double _value = 20;
+bool _switchValue = false;
+RangeValues _currentRangeValues = const RangeValues(40, 80);
 
 class LargeScreen extends StatefulWidget {
   const LargeScreen({super.key});
@@ -40,282 +43,289 @@ class _LargeScreenState extends State<LargeScreen> {
                 child: Container(
                   height: double.infinity,
                   color: AppColors.secondaryColor,
-                  child: Column(
+                  margin: const EdgeInsets.all(20),
+                  child: ListView(
                     children: [
-                      SizedBox(
-                        height: 10,
+                      ListTile(
+                        leading: const CircleAvatar(
+                          radius: 14,
+                          backgroundImage: NetworkImage(
+                              'https://avatars.githubusercontent.com/u/16303698?v=4'),
+                        ),
+                        title: const Text(
+                          'keyvanarasteh/NumbTeam',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
                       ),
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Text('Top Repositories'),
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            icon: Icon(
-                              // <-- Icon
-                              Icons.add,
-                              size: 20.0,
-                            ),
-                            label: Text('New'), // <-- Text
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromARGB(255, 35, 134, 54),
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: 10, vertical: 5),
-                              textStyle: TextStyle(
-                                  fontSize: 15, fontWeight: FontWeight.bold),
-                            ),
+                      ListTile(
+                        leading: const CircleAvatar(
+                          radius: 14,
+                          backgroundImage: NetworkImage(
+                              'https://avatars.githubusercontent.com/u/16303698?v=4'),
+                        ),
+                        title: const Text(
+                          'keyvanarasteh/NumbTeam ',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
                           ),
-                        ],
+                        ),
                       ),
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Container(
-                            width: 40,
-                            height: 40,
-                            clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                            ),
-                            child: Image.network(
-                              'https://avatars.githubusercontent.com/u/16303698?v=4',
-                              fit: BoxFit.cover,
-                            ),
+                      ListTile(
+                        leading: const CircleAvatar(
+                          radius: 14,
+                          backgroundImage: NetworkImage(
+                              'https://avatars.githubusercontent.com/u/92443831?v=4'),
+                        ),
+                        title: const Text(
+                          'MehmetJank/Flutter-UI',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
                           ),
-                          SizedBox(
-                            width: 30,
-                          ),
-                          Align(
-                            alignment: Alignment.center,
-                            child: Text('keyvanarasteh/flutter51'),
-                          )
-                        ],
+                        ),
                       ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Container(
-                            width: 40,
-                            height: 40,
-                            clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                            ),
-                            child: Image.network(
-                              'https://avatars.githubusercontent.com/u/16303698?v=4',
-                              fit: BoxFit.cover,
-                            ),
+                      ListTile(
+                        leading: const CircleAvatar(
+                          radius: 14,
+                          backgroundImage: NetworkImage(
+                              'https://avatars.githubusercontent.com/u/115549152?v=4'),
+                        ),
+                        title: const Text(
+                          'seckin111/I-Love-Flutter<3',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
                           ),
-                          SizedBox(
-                            width: 30,
-                          ),
-                          Align(
-                            alignment: Alignment.center,
-                            child: Text('keyvanarasteh/NumbTeam '),
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Container(
-                            width: 40,
-                            height: 40,
-                            clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                            ),
-                            child: Image.network(
-                              'https://avatars.githubusercontent.com/u/92443831?v=4',
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 30,
-                          ),
-                          Align(
-                            alignment: Alignment.center,
-                            child: Text('MehmetJank/Flutter-UI'),
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Container(
-                            width: 40,
-                            height: 40,
-                            clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                            ),
-                            child: Image.network(
-                              'https://avatars.githubusercontent.com/u/115549152?v=4',
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 30,
-                          ),
-                          Align(
-                            alignment: Alignment.center,
-                            child: Text('seckin111/I-Love-Flutter<3'),
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Container(
-                            width: 40,
-                            height: 40,
-                            clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                            ),
-                            child: Image.network(
-                              'https://avatars.githubusercontent.com/u/47338871?v=4',
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 30,
-                          ),
-                          Align(
-                            alignment: Alignment.center,
-                            child: Text('ElonMusk/SpaceX'),
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Container(
-                            width: 40,
-                            height: 40,
-                            clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                            ),
-                            child: Image.network(
-                              'https://avatars.githubusercontent.com/u/16303698?v=4',
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 30,
-                          ),
-                          Align(
-                            alignment: Alignment.center,
-                            child: Text('keyvanarasteh/DART'),
-                          )
-                        ],
+                        ),
                       ),
                     ],
                   ),
                 ),
               ),
               Expanded(
-                flex: 9,
+                flex: 12,
                 child: Container(
                   color: AppColors.primaryColor,
                   height: double.infinity,
                   child: GridView.count(
-                    crossAxisCount: 3,
+                    crossAxisCount: 4,
                     children: <Widget>[
-                      Container(
-                        margin: EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Colors.cyanAccent,
-                            width: 2,
+                      const MyCustomContainer(
+                        children: [
+                          Text("Chip Widget Test Area"),
+                          SizedBox(
+                            height: 10,
                           ),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text("Chip Widget Test Area"),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Chip(
-                              label: Text('This is a chip widget'),
-                            ),
-                          ],
-                        ),
+                          Chip(
+                            label: Text('This is a chip widget'),
+                          ),
+                        ],
                       ),
-                      Container(
-                        margin: EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Colors.cyanAccent,
-                            width: 2,
+                      const MyCustomContainer(
+                        children: [
+                          Text("DropdownButton Widget Test Area"),
+                          SizedBox(
+                            height: 10,
                           ),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text("DropdownButton Widget Test Area"),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            DropdownButtonExample(),
-                          ],
-                        ),
+                          DropdownButtonExample(),
+                        ],
                       ),
-                      Container(
-                        margin: EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Colors.cyanAccent,
-                            width: 2,
+                      MyCustomContainer(
+                        children: [
+                          const SizedBox(
+                            height: 10,
                           ),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Text("ClipRRect Widget Test Area"),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Expanded(
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(75),
-                                child: Image.network(
-                                  'https://avatars.githubusercontent.com/u/92443831?v=4',
-                                ),
+                          const Text("ClipRRect Widget Test Area"),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Expanded(
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(75),
+                              child: Image.network(
+                                'https://avatars.githubusercontent.com/u/92443831?v=4',
                               ),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
+                      ),
+                      MyCustomContainer(
+                        children: [
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          const Text("Card Widget Test Area"),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Card(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                const ListTile(
+                                  leading: Icon(Icons.album),
+                                  title: Text('Flutter Song'),
+                                  subtitle: Text(
+                                      'Music by MehmetJank. Lyrics by Seckin111.'),
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: <Widget>[
+                                    TextButton(
+                                      child: const Text('BUY TICKETS'),
+                                      onPressed: () {/* ... */},
+                                    ),
+                                    const SizedBox(width: 8),
+                                    TextButton(
+                                      child: const Text('LISTEN'),
+                                      onPressed: () {/* ... */},
+                                    ),
+                                    const SizedBox(width: 8),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      MyCustomContainer(
+                        children: [
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          const Text("Cupertino Slider Widget Test Area"),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          CupertinoSlider(
+                            min: 0.0,
+                            max: 100.0,
+                            value: _value,
+                            onChanged: (value) {
+                              setState(() {
+                                _value = value;
+                              });
+                            },
+                          ),
+                        ],
+                      ),
+                      MyCustomContainer(
+                        children: [
+                          const Text("RangeSlider Widget Test Area"),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          RangeSlider(
+                            values: _currentRangeValues,
+                            min: 0.0,
+                            max: 100.0,
+                            divisions: 5,
+                            labels: RangeLabels(
+                              _currentRangeValues.start.round().toString(),
+                              _currentRangeValues.end.round().toString(),
+                            ),
+                            onChanged: (RangeValues values) {
+                              setState(() {
+                                _currentRangeValues = values;
+                              });
+                            },
+                          ),
+                        ],
+                      ),
+                      MyCustomContainer(
+                        children: [
+                          const Text("FloatingActionButton Widget Test Area"),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          FloatingActionButton(
+                            onPressed: () {
+                              // Add your onPressed code here!
+                            },
+                            child: const Icon(Icons.add),
+                          ),
+                        ],
+                      ),
+                      const MyCustomContainer(
+                        children: [
+                          Text("Checkbox Widget Test Area"),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          MyStatefulWidget(),
+                        ],
+                      ),
+                      const MyCustomContainer(
+                        children: [
+                          Text("Circular Progress Indicator Widget Test Area"),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          CircularProgressIndicator(),
+                        ],
+                      ),
+                      const MyCustomContainer(
+                        children: [
+                          Text("Linear Progress Indicator Widget Test Area"),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          LinearProgressIndicator(),
+                        ],
+                      ),
+                      const MyCustomContainer(
+                        children: [
+                          Text("Cupertino Activity Indicator Widget Test Area"),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          CupertinoActivityIndicator(),
+                        ],
+                      ),
+                      const MyCustomContainer(
+                        children: [
+                          Text("Switch Widget Test Area"),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          SwitchExample(),
+                        ],
+                      ),
+                      MyCustomContainer(
+                        children: [
+                          const Text("Cupertino Switch Widget Test Area"),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          CupertinoSwitch(
+                            value: _switchValue,
+                            onChanged: (bool value) {
+                              setState(() {
+                                _switchValue = value;
+                              });
+                            },
+                          ),
+                        ],
+                      ),
+                      MyCustomContainer(
+                        children: [
+                          const Text("Cupertino Button Widget Test Area"),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          CupertinoButton(
+                            child: const Text("Cupertino Button"),
+                            onPressed: () {},
+                          ),
+                        ],
                       ),
                       Container(
-                        margin: EdgeInsets.all(8),
+                        margin: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           border: Border.all(
                             color: Colors.cyanAccent,
@@ -325,38 +335,20 @@ class _LargeScreenState extends State<LargeScreen> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
+                            const Text(
+                                "Cupertino Alert Dialog Widget Test Area"),
                             SizedBox(
-                              height: 10,
-                            ),
-                            Text("Card Widget Test Area"),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Card(
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  const ListTile(
-                                    leading: Icon(Icons.album),
-                                    title: Text('Flutter Song'),
-                                    subtitle: Text(
-                                        'Music by MehmetJank. Lyrics by Seckin111.'),
-                                  ),
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: <Widget>[
-                                      TextButton(
-                                        child: const Text('BUY TICKETS'),
-                                        onPressed: () {/* ... */},
-                                      ),
-                                      const SizedBox(width: 8),
-                                      TextButton(
-                                        child: const Text('LISTEN'),
-                                        onPressed: () {/* ... */},
-                                      ),
-                                      const SizedBox(width: 8),
-                                    ],
+                              height: 210,
+                              child: CupertinoAlertDialog(
+                                title: const Text("Cupertino Alert Dialog"),
+                                content: const Text(
+                                    "This is a cupertino alert dialog"),
+                                actions: [
+                                  CupertinoDialogAction(
+                                    child: const Text("Ok"),
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
                                   ),
                                 ],
                               ),
@@ -364,134 +356,83 @@ class _LargeScreenState extends State<LargeScreen> {
                           ],
                         ),
                       ),
-                      Container(
-                        margin: EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Colors.cyanAccent,
-                            width: 2,
+                      MyCustomContainer(
+                        children: [
+                          const Text("Cupertino Context Menu Widget Test Area"),
+                          const SizedBox(
+                            height: 10,
                           ),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text("Slider Widget Test Area"),
-                            SizedBox(
-                              height: 10,
+                          CupertinoContextMenu(
+                            actions: <Widget>[
+                              CupertinoContextMenuAction(
+                                child: const Text('Keske'),
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                              ),
+                              CupertinoContextMenuAction(
+                                child: const Text('Iphone um olsa'),
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                              ),
+                            ],
+                            child: Container(
+                              height: 100,
+                              width: 100,
+                              color: Colors.blue,
                             ),
-                            CupertinoSlider(
-                              min: 0.0,
-                              max: 100.0,
-                              value: _value,
-                              onChanged: (value) {
-                                setState(() {
-                                  _value = value;
-                                });
-                              },
-                            ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                      Container(
-                        margin: EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Colors.cyanAccent,
-                            width: 2,
+                      MyCustomContainer(
+                        children: [
+                          const Text("Chip With Wrap Widget Test Area"),
+                          const SizedBox(
+                            height: 15,
                           ),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text("FloatingActionButton Widget Test Area"),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            FloatingActionButton(
-                              onPressed: () {
-                                // Add your onPressed code here!
-                              },
-                              child: const Icon(Icons.add),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Colors.cyanAccent,
-                            width: 2,
+                          Wrap(
+                            spacing: 8.0, // gap between adjacent chips
+                            runSpacing: 4.0, // gap between lines
+                            children: const <Widget>[
+                              Chip(
+                                avatar: CircleAvatar(
+                                    backgroundColor:
+                                        Color.fromARGB(255, 4, 231, 231),
+                                    child: Text('mc')),
+                                label: Text('Mehmet Can'),
+                              ),
+                              Chip(
+                                avatar: CircleAvatar(
+                                    backgroundColor:
+                                        Color.fromARGB(255, 152, 245, 2),
+                                    child: Text('K1')),
+                                label: Text('Keyvan Arasteh'),
+                              ),
+                              Chip(
+                                avatar: CircleAvatar(
+                                    backgroundColor:
+                                        Color.fromARGB(255, 255, 94, 0),
+                                    child: Text('SY')),
+                                label: Text('Seckin Yilmaz'),
+                              ),
+                              Chip(
+                                avatar: CircleAvatar(
+                                    backgroundColor:
+                                        Color.fromARGB(255, 255, 0, 200),
+                                    child: Text('FT')),
+                                label: Text('Flutter'),
+                              ),
+                              Chip(
+                                avatar: CircleAvatar(
+                                    backgroundColor:
+                                        Color.fromARGB(255, 255, 1, 1),
+                                    child: Text('NT')),
+                                label: Text('Numb Team'),
+                              ),
+                            ],
                           ),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text("Checkbox Widget Test Area"),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            MyStatefulWidget(),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Colors.cyanAccent,
-                            width: 2,
-                          ),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                                "Circular Progress Indicator Widget Test Area"),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            CircularProgressIndicator(),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Colors.cyanAccent,
-                            width: 2,
-                          ),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text("Linear Progress Indicator Widget Test Area"),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            LinearProgressIndicator(),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Colors.cyanAccent,
-                            width: 2,
-                          ),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text("Switch Widget Test Area"),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            SwitchExample(),
-                          ],
-                        ),
+                        ],
                       ),
                     ],
                   ),

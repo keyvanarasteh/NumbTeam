@@ -19,9 +19,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         MaterialState.focused,
       };
       if (states.any(interactiveStates.contains)) {
-        return Colors.blue;
+        return Colors.red;
       }
-      return Colors.red;
+      return Colors.blue;
     }
 
     return Checkbox(
