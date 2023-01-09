@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # NumbTeam
 
 # Proje Geliştiricileri 
@@ -9,6 +8,11 @@
 Projemiz github.com sitesinin responsive klonudur.
 
 # Ekran Goruntuleri
+
+Full Video
+[github.webm](https://user-images.githubusercontent.com/92443831/211339529-0191f738-9f45-4063-a336-01a647a776d4.webm)
+
+
 Mobile Screen
 
 ![image](https://user-images.githubusercontent.com/115549152/211199117-0e7161dd-4cb9-4c5f-9593-dc0fd6b4aa8b.png)
